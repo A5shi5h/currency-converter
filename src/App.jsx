@@ -29,7 +29,10 @@ function App() {
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
-            backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+            backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuYtTFuGUbyGHVLqXgQqvDwRtNnJgZdIMNfHoX_qxzww&s')`,
+            backgroundRepeat: `no-repeat`,
+            backgroundSize : `cover`,
+            backgroundPosition:`center`
         }}
     >
         <div className="w-full">
@@ -54,7 +57,7 @@ function App() {
                     <div className="relative w-full h-0.5">
                         <button
                             type="button"
-                            className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                            className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 hover:bg-blue-500 text-white px-2 py-0.5"
                             onClick={swap}  
                         >
                             swap
@@ -66,11 +69,11 @@ function App() {
                             amount={convertedAmount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+                            selectCurrency={to}
                             amountDisable
                         />
                     </div>
-                    <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+                    <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-500 hover:text-black">
                         Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
                 </form>
